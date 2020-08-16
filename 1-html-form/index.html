@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <img src="imagen.jpg" alt="Poster del evento">
+    <form action="destino.php" method="POST">
+        <!-- acceso al sistema -->
+        <fieldset>
+            <legend>Acceso al Sistema</legend>
+            <label>Usuario (Obligatorio):</label>
+            <input type="text" name="usr" placeholder="Escribe tu usuario" required>
+            <label>Password (Obligatorio)</label>
+            <input type="password" name="pass" placeholder="Escriba su Contraceña" required>
+        </fieldset>
+
+        <!-- Datos personales -->
+        <fieldset>
+            <legend>Tus Datos Personales</legend>
+            <label>Nombre(s) y Apellidos (Obligatorio)
+                <input type="text" name="nombre" placeholder="Escribe tu nombre y apellido" required>
+            </label> <br>
+
+            <label>Ciudad de Nacimiento
+                <select name="ciudad">
+                    <option value="cb">Cochabamba</option>
+                    <option value="sc">Santa Cruz</option>
+                    <option value="lp">La Paz</option>
+                    <option value="or" selected >Oruro</option>
+                    <option value="be">Beni</option>
+                </select>
+            </label><br>
+
+            <label>Fecha de tu nacimiento
+                <input type="date" name="fecha" min="1990-01-01">
+            </label> <br>
+
+            <label>Email (Obligatorio)
+                <input type="email" name="email" placeholder="Escriba su correo electronico" required>
+            </label> <br> 
+        </fieldset>
+
+        <!-- conocimientos -->
+        <fieldset>
+            <legend>Tus Conocimientos</legend>
+            <input type="checkbox" name="lenguaje1" value="php">PHP
+            <input type="range" name="rangophp" min="0" max="10"><br>
+            <input type="checkbox" name="lenguaje2" value="html">HTML5
+            <input type="range" name="rangohtml" min="0" max="10"><br>
+            <input type="checkbox" name="lenguaje3" value="css">CSS
+            <input type="range" name="rangocss" min="0" max="10"><br>
+        </fieldset>
+
+
+        <!-- otros -->
+        <fieldset>
+            <legend>Souvenirs</legend>
+            <input type="color" name="colorsouvenir">
+        </fieldset>
+
+        <input type="button" value="Borrar" name="clear">
+        <input type="submit" value="Enviar" name="send">
+    </form>
+</body>
+</html>
